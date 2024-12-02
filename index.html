@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> <b><u> Result Sheet </u></b></h1>
+    <b>Total number of physics:-</b>          <input type="number" id="num1"><br><br>
+      <b> Obtained number of physics:-</b>   <input type="number" id="numb1"><br><br>
+      <b> Total number of Math:-</b>         <input type="number" id="num2"><br><br>
+      <b> Obtained number of Math:-</b>       <input type="number" id="numb2"><br><br>
+       <b>Total number of Urdu:-</b>          <input type="number" id="num3"><br><br>
+       <b>Obtained number of Urdu:-</b>      <input type="number" id="numb3"><br><br>
+    <b>Total number of English:-</b>        <input type="number" id="num4"><br><br>
+    <b>Obtained number of English:-</b>      <input type="number" id="numb4"><br><br>
+    
+    <button onclick="myresult()"> Check </button>
+<br><br>
+<div id="khan1" >
+<table class="j1">
+    
+    <tr>
+        <th> Subject</th>
+        <th> Total marks</th>
+        <th> Obtaind marks</th>
+    </tr>
+    <tr>
+        <th>physics</th>
+        <th id="num1"></th>
+        <th id="numb1"></th>
+        
+    </tr>
+    <tr>
+        <th>Math</th>
+        <th id="num2"></th>
+        <th id="numb2"></th>
+        
+    </tr>
+    <tr>
+        <th>Urdu</th>
+        <th id="num3"></th>
+        <th id="numb3"></th>
+        
+    </tr>
+    <tr>
+        <th>English</th>
+        <th id="num4"></th>
+        <th id="numb4"></th>
+        
+    </tr>
+    <tr>
+        <th>Total</th>
+        <th id="Totalkhan"></th>
+        <th id="obtkhan"></th>
+        </tr>
+        <tr>
+            <th>Percentage</th>
+            <th id="dj2"></th>
+            
+        </tr>
+        
+</table>
+</div><br><br>
+<script>
+
+    function myresult(){
+
+
+let phy1 = Number(document.getElementById("num1").value)
+let phys1 = Number(document.getElementById("numb1").value)
+
+let mat2 = Number(document.getElementById("num2").value)
+let math2 = Number(document.getElementById("numb2").value)
+
+let ur3 = Number(document.getElementById("num3").value)
+let urd3 = Number(document.getElementById("numb3").value)
+
+let eng4 = Number(document.getElementById("num4").value)
+let engl4 = Number(document.getElementById("numb4").value)
+
+
+document.getElementById("num1").innerText = phy1
+document.getElementById("numb1").innerText = phys1
+
+document.getElementById("num2").innerText = mat2
+document.getElementById("numb2").innerText = math2
+
+document.getElementById("num3").innerText = ur3
+document.getElementById("numb3").innerText = urd3
+
+document.getElementById("num4").innerText = eng4
+document.getElementById("numb4").innerText = engl4
+
+
+
+let To1 = phy1 + mat2 + ur3 + eng4
+document.getElementById("Totalkhan").innerText = To1
+
+let Too2 = phys1 + math2 + urd3 + engl4
+document.getElementById("Obtkhan").innerText = Too2
+
+
+let per1 = ( To1 / Too2) * 100
+document.getElementById("dj2").innerText = per1}
+
+
+</script>
+
+    
+</body>
+</html>
